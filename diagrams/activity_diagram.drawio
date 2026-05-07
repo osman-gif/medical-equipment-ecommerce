@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" modified="2026-04-30" agent="5.0" version="24.2.0" type="device">
+  <diagram name="Activity Diagram" id="0">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Start Node -->
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="500" y="50" width="40" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Browse Products -->
+        <mxCell id="browse_products" value="Browse Products" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="470" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Add to Cart? -->
+        <mxCell id="decision_add_cart" value="Add item to cart?" style="shape=rhombus;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="485" y="200" width="90" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Add to Cart -->
+        <mxCell id="add_to_cart" value="Add to Cart" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="350" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Continue Browsing -->
+        <mxCell id="continue_browsing" value="Continue Browsing" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="620" y="320" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Proceed to Checkout? -->
+        <mxCell id="decision_checkout" value="Proceed to Checkout?" style="shape=rhombus;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="485" y="400" width="90" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- View Cart -->
+        <mxCell id="view_cart" value="View Cart" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="470" y="520" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Select Delivery Address -->
+        <mxCell id="select_address" value="Select Delivery Address" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="450" y="600" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Calculate Delivery Fee -->
+        <mxCell id="calculate_fee" value="Calculate Delivery Fee" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="450" y="680" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Process Payment -->
+        <mxCell id="process_payment" value="Process Payment" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="450" y="760" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Payment Successful? -->
+        <mxCell id="decision_payment" value="Payment Successful?" style="shape=rhombus;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="485" y="840" width="90" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Validate Stock -->
+        <mxCell id="validate_stock" value="Validate Product Stock" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="960" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Stock Available? -->
+        <mxCell id="decision_stock" value="Stock Available?" style="shape=rhombus;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1040" width="90" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Create Order -->
+        <mxCell id="create_order" value="Create Order Record" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1160" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Update Stock -->
+        <mxCell id="update_stock" value="Update Product Stock" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1240" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Send Confirmation -->
+        <mxCell id="send_confirmation" value="Send Order Confirmation Email" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1320" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Order Success -->
+        <mxCell id="order_success" value="Order Placed Successfully" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1400" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Payment Failed -->
+        <mxCell id="payment_failed" value="Payment Failed" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="650" y="960" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Stock Insufficient -->
+        <mxCell id="stock_insufficient" value="Insufficient Stock" style="shape=rectangle;html=1;rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1160" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- End Node -->
+        <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="195" y="1480" width="40" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Flow Arrows -->
+        <!-- Start to Browse -->
+        <mxCell id="flow_start_browse" edge="1" parent="1" source="start" target="browse_products">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="90" as="sourcePoint" />
+            <mxPoint x="520" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Browse to Decision Add Cart -->
+        <mxCell id="flow_browse_decision" edge="1" parent="1" source="browse_products" target="decision_add_cart">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="170" as="sourcePoint" />
+            <mxPoint x="520" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Add Cart - Yes -->
+        <mxCell id="flow_decision_yes" edge="1" parent="1" source="decision_add_cart" target="add_to_cart">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="245" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_decision_yes_label" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_decision_yes">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Add Cart - No -->
+        <mxCell id="flow_decision_no" edge="1" parent="1" source="decision_add_cart" target="continue_browsing">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="245" as="sourcePoint" />
+            <mxPoint x="680" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_decision_no_label" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_decision_no">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Add to Cart to Decision Checkout -->
+        <mxCell id="flow_add_checkout" edge="1" parent="1" source="add_to_cart" target="decision_checkout">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="370" as="sourcePoint" />
+            <mxPoint x="530" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Continue Browsing to Decision Checkout -->
+        <mxCell id="flow_continue_checkout" edge="1" parent="1" source="continue_browsing" target="decision_checkout">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="370" as="sourcePoint" />
+            <mxPoint x="575" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Checkout - Yes -->
+        <mxCell id="flow_checkout_yes" edge="1" parent="1" source="decision_checkout" target="view_cart">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="445" as="sourcePoint" />
+            <mxPoint x="520" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_checkout_yes_label" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_checkout_yes">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Checkout - No -->
+        <mxCell id="flow_checkout_no" edge="1" parent="1" source="decision_checkout" target="browse_products">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="445" as="sourcePoint" />
+            <mxPoint x="530" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_checkout_no_label" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_checkout_no">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- View Cart to Select Address -->
+        <mxCell id="flow_cart_address" edge="1" parent="1" source="view_cart" target="select_address">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="570" as="sourcePoint" />
+            <mxPoint x="520" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Select Address to Calculate Fee -->
+        <mxCell id="flow_address_fee" edge="1" parent="1" source="select_address" target="calculate_fee">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="650" as="sourcePoint" />
+            <mxPoint x="520" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Calculate Fee to Process Payment -->
+        <mxCell id="flow_fee_payment" edge="1" parent="1" source="calculate_fee" target="process_payment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="730" as="sourcePoint" />
+            <mxPoint x="520" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Process Payment to Decision Payment -->
+        <mxCell id="flow_payment_decision" edge="1" parent="1" source="process_payment" target="decision_payment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="810" as="sourcePoint" />
+            <mxPoint x="520" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Payment - Yes -->
+        <mxCell id="flow_payment_yes" edge="1" parent="1" source="decision_payment" target="validate_stock">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="885" as="sourcePoint" />
+            <mxPoint x="320" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_payment_yes_label" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_payment_yes">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Payment - No -->
+        <mxCell id="flow_payment_no" edge="1" parent="1" source="decision_payment" target="payment_failed">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="885" as="sourcePoint" />
+            <mxPoint x="700" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_payment_no_label" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_payment_no">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Validate Stock to Decision Stock -->
+        <mxCell id="flow_validate_decision" edge="1" parent="1" source="validate_stock" target="decision_stock">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="1010" as="sourcePoint" />
+            <mxPoint x="330" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Stock - Yes -->
+        <mxCell id="flow_stock_yes" edge="1" parent="1" source="decision_stock" target="create_order">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1085" as="sourcePoint" />
+            <mxPoint x="210" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_stock_yes_label" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_stock_yes">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Stock - No -->
+        <mxCell id="flow_stock_no" edge="1" parent="1" source="decision_stock" target="stock_insufficient">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="1085" as="sourcePoint" />
+            <mxPoint x="510" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_stock_no_label" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="flow_stock_no">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Create Order to Update Stock -->
+        <mxCell id="flow_create_update" edge="1" parent="1" source="create_order" target="update_stock">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="1210" as="sourcePoint" />
+            <mxPoint x="210" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Update Stock to Send Confirmation -->
+        <mxCell id="flow_update_send" edge="1" parent="1" source="update_stock" target="send_confirmation">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="1290" as="sourcePoint" />
+            <mxPoint x="240" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Send Confirmation to Order Success -->
+        <mxCell id="flow_send_success" edge="1" parent="1" source="send_confirmation" target="order_success">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="1370" as="sourcePoint" />
+            <mxPoint x="230" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Order Success to End -->
+        <mxCell id="flow_success_end" edge="1" parent="1" source="order_success" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="1450" as="sourcePoint" />
+            <mxPoint x="215" y="1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Payment Failed to End -->
+        <mxCell id="flow_failed_end" edge="1" parent="1" source="payment_failed" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="1010" as="sourcePoint" />
+            <mxPoint x="215" y="1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Stock Insufficient to End -->
+        <mxCell id="flow_insufficient_end" edge="1" parent="1" source="stock_insufficient" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="1210" as="sourcePoint" />
+            <mxPoint x="215" y="1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

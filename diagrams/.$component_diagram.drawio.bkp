@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" modified="2026-04-30" agent="5.0" version="24.2.0" type="device">
+  <diagram name="Component Diagram" id="0">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- External Systems -->
+        <mxCell id="external_systems" value="External Systems" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="200" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Payment Gateway -->
+        <mxCell id="payment_gateway" value="Payment Gateway" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="70" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Email Service -->
+        <mxCell id="email_service" value="Email Service" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="120" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Frontend Layer -->
+        <mxCell id="frontend_layer" value="Frontend Layer" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="250" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- React App -->
+        <mxCell id="react_app" value="React Application" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="370" y="80" width="210" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Components -->
+        <mxCell id="components" value="Components" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="370" y="140" width="210" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- API Layer -->
+        <mxCell id="api_layer" value="API Layer" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="50" width="250" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Django REST Framework -->
+        <mxCell id="django_rest" value="Django REST Framework" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="80" width="210" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- API Endpoints -->
+        <mxCell id="api_endpoints" value="API Endpoints" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="140" width="210" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Business Logic Layer -->
+        <mxCell id="business_layer" value="Business Logic Layer" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="300" width="250" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Django Apps -->
+        <mxCell id="django_apps" value="Django Apps" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="370" y="330" width="210" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Services -->
+        <mxCell id="services" value="Services" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="370" y="390" width="210" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Data Layer -->
+        <mxCell id="data_layer" value="Data Layer" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="300" width="250" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- PostgreSQL Database -->
+        <mxCell id="database" value="PostgreSQL Database" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="330" width="210" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Models -->
+        <mxCell id="models" value="Django Models" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="390" width="210" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Infrastructure -->
+        <mxCell id="infrastructure" value="Infrastructure" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="550" width="900" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Web Server -->
+        <mxCell id="web_server" value="Web Server (Nginx)" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="580" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Application Server -->
+        <mxCell id="app_server" value="Application Server (Gunicorn)" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="580" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- File Storage -->
+        <mxCell id="file_storage" value="File Storage" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="580" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Cache -->
+        <mxCell id="cache" value="Cache (Redis)" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="580" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Monitoring -->
+        <mxCell id="monitoring" value="Monitoring &amp; Logging" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="770" y="580" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <!-- Frontend to API -->
+        <mxCell id="rel_frontend_api" edge="1" parent="1" source="react_app" target="django_rest">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="105" as="sourcePoint" />
+            <mxPoint x="700" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_frontend_api_label" value="HTTP/REST API" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_frontend_api">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- API to Business Logic -->
+        <mxCell id="rel_api_business" edge="1" parent="1" source="django_rest" target="django_apps">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="825" y="255" as="sourcePoint" />
+            <mxPoint x="475" y="355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_api_business_label" value="Django Signals/ORM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_api_business">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Business Logic to Data -->
+        <mxCell id="rel_business_data" edge="1" parent="1" source="django_apps" target="database">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="405" as="sourcePoint" />
+            <mxPoint x="700" y="355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_business_data_label" value="SQL Queries" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_business_data">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- External to Frontend -->
+        <mxCell id="rel_external_frontend" edge="1" parent="1" source="payment_gateway" target="react_app">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="90" as="sourcePoint" />
+            <mxPoint x="350" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_external_frontend_label" value="Payment API" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_external_frontend">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Business Logic to Email -->
+        <mxCell id="rel_business_email" edge="1" parent="1" source="services" target="email_service">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="435" as="sourcePoint" />
+            <mxPoint x="165" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_business_email_label" value="SMTP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_business_email">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Infrastructure connections -->
+        <mxCell id="rel_web_app" edge="1" parent="1" source="web_server" target="app_server">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="600" as="sourcePoint" />
+            <mxPoint x="250" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rel_app_business" edge="1" parent="1" source="app_server" target="django_apps">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="600" as="sourcePoint" />
+            <mxPoint x="475" y="425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rel_app_cache" edge="1" parent="1" source="app_server" target="cache">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="600" as="sourcePoint" />
+            <mxPoint x="620" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rel_business_file" edge="1" parent="1" source="django_apps" target="file_storage">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="425" as="sourcePoint" />
+            <mxPoint x="530" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

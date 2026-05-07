@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" modified="2026-04-30" agent="5.0" version="24.2.0" type="device">
+  <diagram name="ER Diagram" id="0">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- User Entity -->
+        <mxCell id="user_entity" value="&lt;b&gt;User&lt;/b&gt;&lt;br/&gt;PK: id&lt;br/&gt;username&lt;br/&gt;email&lt;br/&gt;phone&lt;br/&gt;address_1&lt;br/&gt;city&lt;br/&gt;state&lt;br/&gt;postal_code&lt;br/&gt;country" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="180" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Address Entity -->
+        <mxCell id="address_entity" value="&lt;b&gt;Address&lt;/b&gt;&lt;br/&gt;PK: id&lt;br/&gt;FK: user_id&lt;br/&gt;FK: delivery_area_id&lt;br/&gt;line1&lt;br/&gt;line2&lt;br/&gt;city&lt;br/&gt;state&lt;br/&gt;postal_code&lt;br/&gt;country&lt;br/&gt;is_default&lt;br/&gt;created_at&lt;br/&gt;updated_at" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="180" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Category Entity -->
+        <mxCell id="category_entity" value="&lt;b&gt;Category&lt;/b&gt;&lt;br/&gt;PK: id&lt;br/&gt;name&lt;br/&gt;description&lt;br/&gt;created_at" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Product Entity -->
+        <mxCell id="product_entity" value="&lt;b&gt;Product&lt;/b&gt;&lt;br/&gt;PK: id&lt;br/&gt;FK: category_id&lt;br/&gt;sku&lt;br/&gt;name&lt;br/&gt;description&lt;br/&gt;price&lt;br/&gt;stock&lt;br/&gt;available&lt;br/&gt;image&lt;br/&gt;created_at&lt;br/&gt;updated_at" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="350" y="250" width="180" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Order Entity -->
+        <mxCell id="order_entity" value="&lt;b&gt;Order&lt;/b&gt;&lt;br/&gt;PK: id&lt;br/&gt;FK: user_id&lt;br/&gt;FK: address_id&lt;br/&gt;status&lt;br/&gt;total&lt;br/&gt;notes&lt;br/&gt;created_at&lt;br/&gt;updated_at" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="650" y="50" width="180" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- OrderItem Entity -->
+        <mxCell id="orderitem_entity" value="&lt;b&gt;OrderItem&lt;/b&gt;&lt;br/&gt;PK: id&lt;br/&gt;FK: order_id&lt;br/&gt;FK: product_id&lt;br/&gt;quantity&lt;br/&gt;price_at_order" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="650" y="280" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- DeliveryArea Entity -->
+        <mxCell id="deliveryarea_entity" value="&lt;b&gt;DeliveryArea&lt;/b&gt;&lt;br/&gt;PK: id&lt;br/&gt;name&lt;br/&gt;description&lt;br/&gt;is_active&lt;br/&gt;delivery_fee&lt;br/&gt;estimated_days&lt;br/&gt;created_at&lt;br/&gt;updated_at" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="950" y="50" width="180" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <!-- User to Address (1:N) -->
+        <mxCell id="rel_user_address" edge="1" parent="1" source="user_entity" target="address_entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="210" as="sourcePoint" />
+            <mxPoint x="140" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_address_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_user_address">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_address_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_user_address">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- User to Order (1:N) -->
+        <mxCell id="rel_user_order" edge="1" parent="1" source="user_entity" target="order_entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="130" as="sourcePoint" />
+            <mxPoint x="650" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_order_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_user_order">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_order_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_user_order">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Category to Product (1:N) -->
+        <mxCell id="rel_category_product" edge="1" parent="1" source="category_entity" target="product_entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="170" as="sourcePoint" />
+            <mxPoint x="440" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_category_product_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_category_product">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_category_product_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_category_product">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Order to Address (1:1) -->
+        <mxCell id="rel_order_address" edge="1" parent="1" source="order_entity" target="address_entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="210" as="sourcePoint" />
+            <mxPoint x="230" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_address_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_order_address">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_address_one" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_order_address">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Order to OrderItem (1:N) -->
+        <mxCell id="rel_order_orderitem" edge="1" parent="1" source="order_entity" target="orderitem_entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="210" as="sourcePoint" />
+            <mxPoint x="740" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_orderitem_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_order_orderitem">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_orderitem_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_order_orderitem">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- OrderItem to Product (N:1) -->
+        <mxCell id="rel_orderitem_product" edge="1" parent="1" source="orderitem_entity" target="product_entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="340" as="sourcePoint" />
+            <mxPoint x="530" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_orderitem_product_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_orderitem_product">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_orderitem_product_one" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_orderitem_product">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Address to DeliveryArea (N:1) -->
+        <mxCell id="rel_address_deliveryarea" edge="1" parent="1" source="address_entity" target="deliveryarea_entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="380" as="sourcePoint" />
+            <mxPoint x="950" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_address_deliveryarea_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_address_deliveryarea">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_address_deliveryarea_one" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel_address_deliveryarea">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

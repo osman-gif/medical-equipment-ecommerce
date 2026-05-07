@@ -1,0 +1,189 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="ER Diagram" id="0">
+    <mxGraphModel dx="872" dy="1531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="user_entity" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="50" y="-30" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="i18BDHyCW9ZyNTA615lR-3" value="&lt;b style=&quot;text-wrap-mode: wrap;&quot;&gt;User&lt;/b&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;PK: id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;username&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;email&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;phone&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;address_1&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;city&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;state&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;postal_code&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;country&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="user_entity">
+          <mxGeometry x="45" width="90" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="address_entity" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="50" y="280" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="i18BDHyCW9ZyNTA615lR-4" value="&lt;b style=&quot;text-wrap-mode: wrap;&quot;&gt;Address&lt;/b&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;PK: id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FK: user_id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FK: delivery_area_id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;line1&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;line2&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;city&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;state&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;postal_code&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;country&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;is_default&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;created_at&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;updated_at&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="address_entity">
+          <mxGeometry x="25" y="10" width="130" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="category_entity" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="350" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="product_entity" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="350" y="250" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="i18BDHyCW9ZyNTA615lR-5" value="&lt;b style=&quot;text-wrap-mode: wrap;&quot;&gt;Product&lt;/b&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;PK: id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FK: category_id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;sku&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;name&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;description&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;price&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;stock&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;available&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;image&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;created_at&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;updated_at&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="product_entity">
+          <mxGeometry x="35" y="5" width="110" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="order_entity" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="650" y="50" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="i18BDHyCW9ZyNTA615lR-7" value="&lt;b style=&quot;text-wrap-mode: wrap;&quot;&gt;Order&lt;/b&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;PK: id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FK: user_id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FK: address_id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;status&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;total&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;notes&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;created_at&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;updated_at&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="order_entity">
+          <mxGeometry x="40" y="30" width="100" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="orderitem_entity" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="650" y="280" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="i18BDHyCW9ZyNTA615lR-6" value="&lt;b style=&quot;text-wrap-mode: wrap;&quot;&gt;OrderItem&lt;/b&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;PK: id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FK: order_id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FK: product_id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;quantity&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;price_at_order&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="orderitem_entity">
+          <mxGeometry x="40" y="10" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="deliveryarea_entity" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="950" y="50" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="i18BDHyCW9ZyNTA615lR-8" value="&lt;b style=&quot;text-wrap-mode: wrap;&quot;&gt;DeliveryArea&lt;/b&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;PK: id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;name&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;description&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;is_active&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;delivery_fee&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;estimated_days&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;created_at&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;updated_at&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="deliveryarea_entity">
+          <mxGeometry x="30" y="10" width="110" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_address" parent="1" source="user_entity" target="address_entity" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="210" as="sourcePoint" />
+            <mxPoint x="140" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="20" y="130" />
+              <mxPoint x="20" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_address_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_user_address" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_address_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_user_address" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_order" parent="1" source="user_entity" target="order_entity" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="130" as="sourcePoint" />
+            <mxPoint x="650" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="-30" />
+              <mxPoint x="520" y="-30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_order_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_user_order" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_order_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_user_order" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_category_product" parent="1" source="category_entity" target="product_entity" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="170" as="sourcePoint" />
+            <mxPoint x="440" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="170" />
+              <mxPoint x="290" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_category_product_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_category_product" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_category_product_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_category_product" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_address" parent="1" source="order_entity" target="address_entity" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="210" as="sourcePoint" />
+            <mxPoint x="230" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" />
+              <mxPoint x="320" y="20" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_address_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_order_address" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_address_one" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_order_address" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_orderitem" parent="1" source="order_entity" target="orderitem_entity" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="210" as="sourcePoint" />
+            <mxPoint x="740" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="590" y="200" />
+              <mxPoint x="590" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_orderitem_crow" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_order_orderitem" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_order_orderitem_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_order_orderitem" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_orderitem_product" parent="1" source="orderitem_entity" target="product_entity" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="340" as="sourcePoint" />
+            <mxPoint x="530" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_orderitem_product_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_orderitem_product" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_orderitem_product_one" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_orderitem_product" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_address_deliveryarea" parent="1" source="address_entity" target="deliveryarea_entity" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="380" as="sourcePoint" />
+            <mxPoint x="950" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="490" />
+              <mxPoint x="720" y="490" />
+              <mxPoint x="880" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_address_deliveryarea_many" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_address_deliveryarea" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_address_deliveryarea_one" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_address_deliveryarea" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="i18BDHyCW9ZyNTA615lR-1" value="&lt;b style=&quot;text-wrap-mode: wrap;&quot;&gt;Category&lt;/b&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;PK: id&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;name&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;description&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;created_at&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="58" width="80" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,119 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="0">
+    <mxGraphModel dx="317090" dy="221864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="system_boundary" value="Medical Equipment E-Commerce Platform" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=16;strokeWidth=2;dashed=0;dashPattern=1 0;" parent="1" vertex="1">
+          <mxGeometry x="250" y="150" width="700" height="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_customer" value="Customer&#xa;(Healthcare&#xa;Professional)" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontSize=11;textAlign=center;" parent="1" vertex="1">
+          <mxGeometry x="50" y="350" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" value="Admin&#xa;(Staff)" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontSize=11;textAlign=center;" parent="1" vertex="1">
+          <mxGeometry x="950" y="350" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_register" value="Register" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="300" y="200" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_login" value="Login" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="450" y="200" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_logout" value="Logout" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="600" y="200" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_browse" value="Browse Products" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="300" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_product_details" value="View Product&#xa;Details" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_filter" value="Filter by&#xa;Category" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="600" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_manage_products" value="Manage Products&#xa;(Add/Edit/Delete)" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="760" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_upload_images" value="Upload Product&#xa;Images" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="760" y="330" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_add_cart" value="Add to Cart" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="300" y="440" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_view_cart" value="View Cart" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="450" y="440" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_update_qty" value="Update Quantity" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="600" y="440" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_remove_cart" value="Remove from Cart" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="750" y="460" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_place_order" value="Place Order" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="300" y="560" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_order_history" value="View Order&#xa;History" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="560" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_order_details" value="View Order&#xa;Details" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="600" y="560" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_process_order" value="Process Order&#xa;(Admin)" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="750" y="560" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_update_status" value="Update Order&#xa;Status" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="750" y="640" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_manage_addresses" value="Manage Delivery&#xa;Addresses" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="300" y="680" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_delivery_options" value="View Delivery&#xa;Options &amp; Fees" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="680" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_track_delivery" value="Track Delivery&#xa;Status" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="600" y="680" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_manage_deliveries" value="Manage Deliveries&#xa;(Admin)" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="750" y="720" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_view_profile" value="View Profile" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="300" y="800" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_edit_profile" value="Edit Profile" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="450" y="800" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_customer_register" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_register" edge="1" />
+        <mxCell id="rel_customer_login" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_login" edge="1" />
+        <mxCell id="rel_customer_logout" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_logout" edge="1" />
+        <mxCell id="rel_customer_browse" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_browse" edge="1" />
+        <mxCell id="rel_customer_details" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_product_details" edge="1" />
+        <mxCell id="rel_customer_filter" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_filter" edge="1" />
+        <mxCell id="rel_customer_add_cart" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_add_cart" edge="1" />
+        <mxCell id="rel_customer_view_cart" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_view_cart" edge="1" />
+        <mxCell id="rel_customer_update_qty" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_update_qty" edge="1" />
+        <mxCell id="rel_customer_remove_cart" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_remove_cart" edge="1" />
+        <mxCell id="rel_customer_place_order" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_place_order" edge="1" />
+        <mxCell id="rel_customer_order_history" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_order_history" edge="1" />
+        <mxCell id="rel_customer_order_details" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_order_details" edge="1" />
+        <mxCell id="rel_customer_manage_addr" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_manage_addresses" edge="1" />
+        <mxCell id="rel_customer_delivery_opt" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_delivery_options" edge="1" />
+        <mxCell id="rel_customer_track_delivery" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_track_delivery" edge="1" />
+        <mxCell id="rel_customer_view_profile" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_view_profile" edge="1" />
+        <mxCell id="rel_customer_edit_profile" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_customer" target="uc_edit_profile" edge="1" />
+        <mxCell id="rel_admin_login" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_admin" target="uc_login" edge="1" />
+        <mxCell id="rel_admin_logout" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_admin" target="uc_logout" edge="1" />
+        <mxCell id="rel_admin_manage_products" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_admin" target="uc_manage_products" edge="1" />
+        <mxCell id="rel_admin_upload_images" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_admin" target="uc_upload_images" edge="1" />
+        <mxCell id="rel_admin_process_order" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_admin" target="uc_process_order" edge="1" />
+        <mxCell id="rel_admin_update_status" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_admin" target="uc_update_status" edge="1" />
+        <mxCell id="rel_admin_manage_deliveries" style="edgeStyle=orthogonalEdgeStyle" parent="1" source="actor_admin" target="uc_manage_deliveries" edge="1" />
+        <mxCell id="dep_add_cart_details" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeWidth=2" parent="1" source="uc_add_cart" target="uc_product_details" edge="1" />
+        <mxCell id="dep_place_order_cart" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeWidth=2" parent="1" source="uc_place_order" target="uc_view_cart" edge="1" />
+        <mxCell id="dep_place_order_delivery" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeWidth=2" parent="1" source="uc_place_order" target="uc_delivery_options" edge="1" />
+        <mxCell id="dep_order_history_details" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeWidth=2" parent="1" source="uc_order_history" target="uc_order_details" edge="1" />
+        <mxCell id="dep_process_update_status" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeWidth=2" parent="1" source="uc_process_order" target="uc_update_status" edge="1" />
+        <mxCell id="dep_track_delivery_options" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeWidth=2" parent="1" source="uc_track_delivery" target="uc_delivery_options" edge="1" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

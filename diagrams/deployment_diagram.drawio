@@ -1,0 +1,169 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Deployment Diagram" id="0">
+    <mxGraphModel dx="727" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="client_devices" value="Client Devices" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="web_browser" value="&lt;&lt;device&gt;&gt;&lt;br/&gt;Web Browser&lt;br/&gt;(Chrome, Firefox, Safari)" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="70" y="80" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile_browser" value="&lt;&lt;device&gt;&gt;&lt;br/&gt;Mobile Browser&lt;br/&gt;(iOS Safari, Chrome)" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="70" y="140" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="web_server_node" value="&lt;&lt;node&gt;&gt;&lt;br/&gt;Web Server&lt;br/&gt;Ubuntu 22.04 LTS" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=12;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="350" y="50" width="250" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="nginx" value="&lt;&lt;executionEnvironment&gt;&gt;&lt;br/&gt;Nginx 1.24&lt;br/&gt;Reverse Proxy &amp; Static Files" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="370" y="80" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gunicorn" value="&lt;&lt;executionEnvironment&gt;&gt;&lt;br/&gt;Gunicorn&lt;br/&gt;WSGI Server" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="370" y="160" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="django_app" value="&lt;&lt;artifact&gt;&gt;&lt;br/&gt;Django Application&lt;br/&gt;Python 3.11, Django 4.2.8" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="370" y="230" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="react_build" value="&lt;&lt;artifact&gt;&gt;&lt;br/&gt;React Build&lt;br/&gt;Static Files" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="370" y="300" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="db_server" value="&lt;&lt;node&gt;&gt;&lt;br/&gt;Database Server&lt;br/&gt;Ubuntu 22.04 LTS" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=12;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="700" y="200" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="postgresql" value="MySql&lt;div&gt;database server&lt;/div&gt;" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="720" y="230" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="db_files" value="&lt;&lt;artifact&gt;&gt;&lt;br/&gt;Database Files&lt;br/&gt;Medical Equipment DB" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="720" y="300" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="file_server" value="&lt;&lt;node&gt;&gt;&lt;br/&gt;File Storage&lt;br/&gt;Ubuntu 22.04 LTS" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=12;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="700" y="450" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="file_system" value="&lt;&lt;executionEnvironment&gt;&gt;&lt;br/&gt;Local File System&lt;br/&gt;/media/products/" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="720" y="480" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cache_server" value="&lt;&lt;node&gt;&gt;&lt;br/&gt;Cache Server&lt;br/&gt;Ubuntu 22.04 LTS" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=12;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="350" y="500" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="&lt;&lt;executionEnvironment&gt;&gt;&lt;br/&gt;Redis 7.0&lt;br/&gt;Cache &amp; Session Store" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="370" y="530" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="external_services" value="External Services" style="shape=rectangle;html=1;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="550" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="payment_gateway" value="&lt;&lt;executionEnvironment&gt;&gt;&lt;br/&gt;Payment Gateway&lt;br/&gt;(Stripe/PayPal)" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="70" y="580" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="email_service" value="&lt;&lt;executionEnvironment&gt;&gt;&lt;br/&gt;Email Service&lt;br/&gt;(SendGrid/Gmail SMTP)" style="shape=rectangle;html=1;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="70" y="630" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_client_web" parent="1" source="web_browser" target="nginx" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="105" as="sourcePoint" />
+            <mxPoint x="350" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_client_web_label" value="HTTPS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_client_web" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_mobile_web" parent="1" source="mobile_browser" target="nginx" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="160" as="sourcePoint" />
+            <mxPoint x="350" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_mobile_web_label" value="HTTPS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_mobile_web" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_nginx_gunicorn" parent="1" source="nginx" target="gunicorn" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="140" as="sourcePoint" />
+            <mxPoint x="475" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_nginx_gunicorn_label" value="WSGI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_nginx_gunicorn" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_gunicorn_django" parent="1" source="gunicorn" target="django_app" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="210" as="sourcePoint" />
+            <mxPoint x="475" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_db" parent="1" source="django_app" target="postgresql" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="255" as="sourcePoint" />
+            <mxPoint x="700" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_db_label" value="SQL" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_django_db" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_files" parent="1" source="django_app" target="file_system" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="350" as="sourcePoint" />
+            <mxPoint x="475" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_files_label" value="File I/O" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_django_files" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_cache" parent="1" source="django_app" target="redis" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="350" as="sourcePoint" />
+            <mxPoint x="475" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_cache_label" value="Redis Protocol" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_django_cache" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_payment" parent="1" source="django_app" target="payment_gateway" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="350" as="sourcePoint" />
+            <mxPoint x="165" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_payment_label" value="HTTPS API" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_django_payment" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_email" parent="1" source="django_app" target="email_service" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="350" as="sourcePoint" />
+            <mxPoint x="165" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_django_email_label" value="SMTP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_django_email" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_nginx_react" parent="1" source="nginx" target="react_build" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="140" as="sourcePoint" />
+            <mxPoint x="475" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_nginx_react_label" value="Static Files" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel_nginx_react" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

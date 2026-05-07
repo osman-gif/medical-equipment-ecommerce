@@ -1,0 +1,288 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Sequence Diagram" id="0">
+    <mxGraphModel dx="872" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="2000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="customer_lifeline" value="Customer" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="customer_line" style="html=1;dashed=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="1" height="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend_lifeline" value="React Frontend" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend_line" style="html=1;dashed=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="280" y="80" width="1" height="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="api_lifeline" value="Django REST API" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="40" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api_line" style="html=1;dashed=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="510" y="80" width="1" height="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="order_service_lifeline" value="Order Service" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="order_service_line" style="html=1;dashed=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="760" y="80" width="1" height="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="product_service_lifeline" value="Product Service" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="920" y="40" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="product_service_line" style="html=1;dashed=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="985" y="80" width="1" height="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="database_lifeline" value="PostgreSQL DB" style="shape=rectangle;html=1;verticalAlign=top;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="database_line" style="html=1;dashed=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1240" y="80" width="1" height="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="msg1" parent="1" source="customer_lifeline" target="frontend_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="140" as="sourcePoint" />
+            <mxPoint x="280" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg1_label" value="1. Browse products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg1" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg2" parent="1" source="frontend_lifeline" target="api_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="190" as="sourcePoint" />
+            <mxPoint x="510" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg2_label" value="2. GET /api/products/" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg2" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg3" parent="1" source="api_lifeline" target="product_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="240" as="sourcePoint" />
+            <mxPoint x="985" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg3_label" value="3. get_products()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg3" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg4" parent="1" source="product_service_lifeline" target="database_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="985" y="290" as="sourcePoint" />
+            <mxPoint x="1240" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg4_label" value="4. SELECT * FROM products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg4" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg5" parent="1" source="database_lifeline" target="product_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="340" as="sourcePoint" />
+            <mxPoint x="985" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg5_label" value="5. Products data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg5" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg6" parent="1" source="product_service_lifeline" target="api_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="985" y="390" as="sourcePoint" />
+            <mxPoint x="510" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg6_label" value="6. Products JSON" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg6" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg7" parent="1" source="api_lifeline" target="frontend_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="440" as="sourcePoint" />
+            <mxPoint x="280" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg7_label" value="7. Products list" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg7" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg8" parent="1" source="customer_lifeline" target="frontend_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="490" as="sourcePoint" />
+            <mxPoint x="280" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg8_label" value="8. Add to cart" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg8" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg9" parent="1" source="customer_lifeline" target="frontend_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="540" as="sourcePoint" />
+            <mxPoint x="280" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg9_label" value="9. Proceed to checkout" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg9" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg10" parent="1" source="frontend_lifeline" target="api_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="590" as="sourcePoint" />
+            <mxPoint x="510" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg10_label" value="10. POST /api/orders/" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg10" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg11" parent="1" source="api_lifeline" target="order_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="640" as="sourcePoint" />
+            <mxPoint x="760" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg11_label" value="11. create_order(order_data)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg11" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg12" parent="1" source="order_service_lifeline" target="product_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="690" as="sourcePoint" />
+            <mxPoint x="985" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg12_label" value="12. check_stock(product_ids)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg12" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg13" parent="1" source="product_service_lifeline" target="database_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="985" y="740" as="sourcePoint" />
+            <mxPoint x="1240" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg13_label" value="13. SELECT stock FROM products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg13" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg14" parent="1" source="database_lifeline" target="product_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="790" as="sourcePoint" />
+            <mxPoint x="985" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg14_label" value="14. Stock levels" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg14" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg15" parent="1" source="product_service_lifeline" target="order_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="985" y="840" as="sourcePoint" />
+            <mxPoint x="760" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg15_label" value="15. Stock available" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg15" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg16" parent="1" source="order_service_lifeline" target="database_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="890" as="sourcePoint" />
+            <mxPoint x="1240" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg16_label" value="16. INSERT INTO orders, order_items" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg16" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg17" parent="1" source="order_service_lifeline" target="product_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="940" as="sourcePoint" />
+            <mxPoint x="985" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg17_label" value="17. update_stock(product_ids)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg17" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg18" parent="1" source="product_service_lifeline" target="database_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="985" y="990" as="sourcePoint" />
+            <mxPoint x="1240" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg18_label" value="18. UPDATE products SET stock" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg18" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg19" parent="1" source="database_lifeline" target="order_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="1040" as="sourcePoint" />
+            <mxPoint x="760" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg19_label" value="19. Order created successfully" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg19" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg20" parent="1" source="order_service_lifeline" target="api_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="1090" as="sourcePoint" />
+            <mxPoint x="510" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg20_label" value="20. Order JSON response" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg20" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg21" parent="1" source="api_lifeline" target="frontend_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="1140" as="sourcePoint" />
+            <mxPoint x="280" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg21_label" value="21. Order confirmation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg21" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg22" parent="1" source="order_service_lifeline" target="order_service_lifeline" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="1190" as="sourcePoint" />
+            <mxPoint x="930" y="1190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg22_label" value="22. send_email()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" parent="msg22" vertex="1" connectable="0">
+          <mxGeometry x="0" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
