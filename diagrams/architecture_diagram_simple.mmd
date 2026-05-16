@@ -1,0 +1,19 @@
+graph LR
+  Frontend[React_Vite]
+  API[DRF_Django]
+  CDN[Static_Hosting]
+  DB[MySQL]
+  Media[Media_Storage]
+  CI[CI_CD]
+  Docker[Docker]
+  Redis[Redis]
+  SMTP[SMTP]
+
+  Frontend -->|HTTP| API
+  Frontend -->|Static_Assets| CDN
+  API --> DB
+  API --> Media
+  API -->|email_notifications| SMTP
+  API --> Redis
+  CI --> Docker
+  Docker --> API

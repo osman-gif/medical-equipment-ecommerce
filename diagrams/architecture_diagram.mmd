@@ -1,0 +1,34 @@
+flowchart LR
+  subgraph Frontend
+    A[React (Vite)] -->|HTTP| API[Backend API]
+    A -->|Static Assets| CDN[Static Hosting]
+  end
+
+  subgraph Backend
+    API[DRF / Django]
+    Auth[JWT Auth]
+    Media[Media Storage]
+    API --> Auth
+    API --> DB
+    API --> Media
+  end
+
+  subgraph Database
+    DB[(MySQL)]
+  end
+
+  subgraph Infra
+    CI[CI/CD]
+    Docker[Docker]
+    Redis[Redis (optional cache/queue)]
+    CI --> Docker
+    Docker --> API
+    API --> Redis
+  end
+
+  CDN --> A
+  DB -->|persistent data| Media
+  API -->|email, notifications| SMTP[SMTP / 3rd-party]
+
+  classDef gray fill:#f3f4f6,stroke:#bbb;
+  class Frontend,Backend,Database,Infra gray;
