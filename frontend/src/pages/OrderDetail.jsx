@@ -1,9 +1,12 @@
+/* Documentation for frontend/src/pages/OrderDetail.jsx.*/
+
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import orderService from '../services/orderService'
 import toast from 'react-hot-toast'
 
 export default function OrderDetail() {
+    /* Renders the OrderDetail UI component. */
   const { id } = useParams()
   const [order, setOrder] = useState(null)
   const [loading, setLoading] = useState(true)

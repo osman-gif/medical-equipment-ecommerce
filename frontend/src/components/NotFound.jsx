@@ -1,7 +1,10 @@
+/* Documentation for frontend/src/components/NotFound.jsx.*/
+
 import { Link } from 'react-router-dom'
 import { FiHome } from 'react-icons/fi'
 
 export default function NotFound() {
+    /* Renders the NotFound UI component. */
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center">

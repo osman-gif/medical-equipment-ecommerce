@@ -1,7 +1,10 @@
+/* Documentation for frontend/src/components/CategoryFilter.jsx.*/
+
 import { useEffect, useState } from 'react'
 import productService from '../services/productService'
 
 export default function CategoryFilter({ onCategoryChange }) {
+    /* Renders the CategoryFilter UI component. */
   const [categories, setCategories] = useState([])
   const [loading, setLoading] = useState(true)
 

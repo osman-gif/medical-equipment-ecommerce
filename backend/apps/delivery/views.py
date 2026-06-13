@@ -1,3 +1,5 @@
+"""Documentation for backend/apps/delivery/views.py."""
+
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -14,6 +16,7 @@ class DeliveryAreaViewSet(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
     
     def get_permissions(self):
+        """Handles the get_permissions behavior for this module."""
         if self.action in ['create', 'update', 'partial_update', 'destroy']:
             return [IsAdminUser()]
         return [AllowAny()]

@@ -1,3 +1,5 @@
+"""Documentation for backend/apps/users/tests.py."""
+
 import pytest
 from django.test import TestCase
 from django.contrib.auth import get_user_model
@@ -10,6 +12,7 @@ class UserModelTest(TestCase):
     """Test cases for User model"""
 
     def setUp(self):
+        """Handles the setUp behavior for this module."""
         self.user_data = {
             'username': 'testuser',
             'email': 'test@example.com',
@@ -48,6 +51,7 @@ class AddressModelTest(TestCase):
     """Test cases for Address model"""
 
     def setUp(self):
+        """Handles the setUp behavior for this module."""
         self.user = User.objects.create_user(
             username='testuser',
             email='test@example.com',

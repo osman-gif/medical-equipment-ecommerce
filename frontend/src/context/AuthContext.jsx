@@ -1,7 +1,32 @@
+/* Documentation for frontend/src/context/AuthContext.jsx.*/
+
 import { useState, useContext, createContext, useEffect } from 'react'
 import authService from '../services/authService'
 
 const AuthContext = createContext()
+
+const getErrorMessage = (err, fallback) => {
+  const data = err?.response?.data
+
+  if (typeof data === 'string') {
+    return data || fallback
+  }
+
+  const messages = []
+  for (const key of ['detail', 'error', 'non_field_errors']) {
+    const value = data?.[key]
+    if (Array.isArray(value)) messages.push(...value)
+    else if (typeof value === 'string' && value.trim()) messages.push(value)
+  }
+
+  for (const key of ['email', 'username', 'password', 'first_name', 'last_name', 'phone']) {
+    const value = data?.[key]
+    if (Array.isArray(value)) messages.push(...value)
+    else if (typeof value === 'string' && value.trim()) messages.push(value)
+  }
+
+  return messages[0] || fallback
+}
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
@@ -27,7 +52,7 @@ export const AuthProvider = ({ children }) => {
       setUser(userData)
       return userData
     } catch (err) {
-      const message = err.response?.data?.detail || err.response?.data?.email?.[0] || 'Registration failed'
+      const message = getErrorMessage(err, 'Registration failed')
       setError(message)
       throw err
     }
@@ -44,7 +69,7 @@ export const AuthProvider = ({ children }) => {
       setUser(userData)
       return userData
     } catch (err) {
-      const message = err.response?.data?.error || 'Login failed'
+      const message = getErrorMessage(err, 'Login failed')
       setError(message)
       throw err
     }

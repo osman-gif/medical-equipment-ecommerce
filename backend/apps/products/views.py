@@ -1,3 +1,5 @@
+"""Documentation for backend/apps/products/views.py."""
+
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -39,6 +41,7 @@ class ProductViewSet(viewsets.ModelViewSet):
         return [AllowAny()]
     
     def get_serializer_class(self):
+        """Handles the get_serializer_class behavior for this module."""
         if self.action == 'retrieve':
             return ProductDetailSerializer
         return ProductSerializer

@@ -1,0 +1,87 @@
+erDiagram
+    USER {
+        int id PK
+        string username
+        string email
+        string phone
+        string address_1
+        string city
+        string state
+        string postal_code
+        string country
+        datetime date_joined
+        datetime last_login
+    }
+
+    ADDRESS {
+        int id PK
+        int user_id FK
+        int delivery_area_id
+        string line1
+        string line2
+        string city
+        string state
+        string postal_code
+        string country
+        bool is_default
+        datetime created_at
+        datetime updated_at
+    }
+
+    DELIVERY_AREA {
+        int id PK
+        string name
+        string description
+        bool is_active
+        decimal delivery_fee
+        int estimated_days
+        datetime created_at
+        datetime updated_at
+    }
+
+    CATEGORY {
+        int id PK
+        string name
+        text description
+        datetime created_at
+    }
+
+    PRODUCT {
+        int id PK
+        int category_id FK
+        string sku
+        string name
+        text description
+        decimal price
+        int stock
+        bool available
+        string image
+        datetime created_at
+        datetime updated_at
+    }
+
+    "ORDER" {
+        int id PK
+        int user_id FK
+        int address_id FK
+        string status
+        decimal total
+        text notes
+        datetime created_at
+        datetime updated_at
+    }
+
+    ORDER_ITEM {
+        int id PK
+        int order_id FK
+        int product_id FK
+        int quantity
+        decimal price_at_order
+    }
+
+    USER ||--o{ ADDRESS : "has"
+    USER ||--o{ "ORDER" : "places"
+    ADDRESS }o--|| "ORDER" : "used by"
+    CATEGORY ||--o{ PRODUCT : "contains"
+    PRODUCT ||--o{ ORDER_ITEM : "included in"
+    "ORDER" ||--o{ ORDER_ITEM : "contains"

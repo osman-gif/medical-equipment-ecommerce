@@ -1,3 +1,5 @@
+"""Documentation for backend/apps/users/views.py."""
+
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -84,9 +86,11 @@ class AddressViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     
     def get_queryset(self):
+        """Handles the get_queryset behavior for this module."""
         return Address.objects.filter(user=self.request.user)
     
     def perform_create(self, serializer):
+        """Handles the perform_create behavior for this module."""
         serializer.save(user=self.request.user)
     
     @action(detail=False, methods=['post'])

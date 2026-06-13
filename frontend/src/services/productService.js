@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/services/productService.js.*/
+
 import api from './api'
 
 const productService = {

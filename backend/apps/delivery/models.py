@@ -1,3 +1,5 @@
+"""Documentation for backend/apps/delivery/models.py."""
+
 from django.db import models
 
 
@@ -12,7 +14,9 @@ class DeliveryArea(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
+        """Represents the Meta class in this module."""
         ordering = ['name']
     
     def __str__(self):
+        """Handles the __str__ behavior for this module."""
         return self.name

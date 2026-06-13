@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/pages/Addresses.jsx.*/
+
 import { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import authService from '../services/authService'
@@ -5,6 +7,7 @@ import toast from 'react-hot-toast'
 import { FiEdit2, FiTrash2, FiPlus } from 'react-icons/fi'
 
 export default function Addresses() {
+    /* Renders the Addresses UI component. */
   const { user } = useAuth()
   const [addresses, setAddresses] = useState([])
   const [loading, setLoading] = useState(true)

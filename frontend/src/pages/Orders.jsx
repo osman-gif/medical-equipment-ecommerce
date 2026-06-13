@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/pages/Orders.jsx.*/
+
 import { useEffect, useState } from 'react'
 import orderService from '../services/orderService'
 import toast from 'react-hot-toast'
@@ -5,6 +7,7 @@ import { useAuth } from '../context/AuthContext'
 import { Link } from 'react-router-dom'
 
 export default function Orders() {
+    /* Renders the Orders UI component. */
   const { user } = useAuth()  
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)

@@ -1,3 +1,5 @@
+"""Documentation for backend/apps/users/models.py."""
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -26,10 +28,12 @@ class User(AbstractUser):
     )
     
     class Meta:
+        """Represents the Meta class in this module."""
         verbose_name = 'user'
         verbose_name_plural = 'users'
     
     def __str__(self):
+        """Handles the __str__ behavior for this module."""
         return self.email or self.username
 
 
@@ -48,8 +52,10 @@ class Address(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
+        """Represents the Meta class in this module."""
         verbose_name_plural = 'addresses'
         ordering = ['-created_at']
     
     def __str__(self):
-        return f"{self.line1}, {self.city} - {self.user.email}"
+        """Handles the __str__ behavior for this module."""
+        return f"Address for {self.user.email}"

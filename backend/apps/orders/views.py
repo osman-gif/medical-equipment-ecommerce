@@ -1,3 +1,5 @@
+"""View logic for managing customer orders through the REST API."""
+
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -16,7 +18,7 @@ from .serializers import (
 
 
 class OrderViewSet(viewsets.ModelViewSet):
-    """Order management"""
+    """Provides CRUD operations and custom order analytics endpoints."""
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['status']
@@ -25,11 +27,15 @@ class OrderViewSet(viewsets.ModelViewSet):
     ordering = ['-created_at']
     
     def get_queryset(self):
+        """Return every order for staff users and only the current user's orders for others."""
+
         if self.request.user.is_staff:
             return Order.objects.all()
         return Order.objects.filter(user=self.request.user)
     
     def get_serializer_class(self):
+        """Choose the correct serializer based on the current action."""
+
         if self.action == 'create':
             return OrderCreateSerializer
         elif self.action == 'retrieve':
@@ -41,7 +47,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         return OrderDetailSerializer
     
     def create(self, request, *args, **kwargs):
-        """Create a new order"""
+        """Create a new order from the submitted address, notes, and items."""
         print(f"[ORDER CREATE] User: {request.user}, Authenticated: {request.user.is_authenticated}")
         print(f"[ORDER CREATE] Request data: {request.data}")
         
@@ -68,7 +74,7 @@ class OrderViewSet(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['get'])
     def my_orders(self, request):
-        """Get current user's orders"""
+        """List the authenticated user's order history in newest-first order."""
         print(f"[MY_ORDERS] User: {request.user}, Auth: {request.user.is_authenticated}")
         orders = Order.objects.filter(user=request.user).order_by('-created_at')
         print(f"[MY_ORDERS] Found {orders.count()} orders for user {request.user.id}")
@@ -80,7 +86,7 @@ class OrderViewSet(viewsets.ModelViewSet):
     
     @action(detail=True, methods=['patch'], permission_classes=[IsAdminUser])
     def update_status(self, request):
-        """Update order status (admin only)"""
+        """Allow an admin to update the status of one order."""
         order = self.get_object()
         serializer = OrderStatusUpdateSerializer(order, data=request.data, partial=True)
         if serializer.is_valid():
@@ -90,7 +96,7 @@ class OrderViewSet(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['get'], permission_classes=[IsAdminUser])
     def by_status(self, request):
-        """Get orders filtered by status (admin only)"""
+        """Return all orders that match a specific status for admin dashboards."""
         status_filter = request.query_params.get('status')
         if not status_filter:
             return Response({'error': 'status parameter required'}, status=status.HTTP_400_BAD_REQUEST)
@@ -101,7 +107,7 @@ class OrderViewSet(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['get'], permission_classes=[IsAdminUser])
     def purchase_history(self, request):
-        """Get comprehensive purchase history with analytics (admin only)"""
+        """Provide analytics for recent orders, top customers, and top products."""
         # Get query parameters for filtering
         days = int(request.query_params.get('days', 30))
         status_filter = request.query_params.get('status', None)

@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/components/Navbar.jsx.*/
+
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiShoppingCart, FiMenu, FiX, FiLogOut, FiUser, FiChevronDown } from 'react-icons/fi'
@@ -5,6 +7,7 @@ import { useCart } from '../context/CartContext'
 import { useAuth } from '../context/AuthContext'
 
 export default function Navbar() {
+    /* Renders the Navbar UI component. */
   const [isOpen, setIsOpen] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
   const { cart, getTotalItems } = useCart()

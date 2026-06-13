@@ -1,3 +1,5 @@
+"""Serializers used to validate and format order-related API data."""
+
 from rest_framework import serializers
 from apps.products.models import Product
 from apps.products.serializers import ProductSerializer
@@ -7,30 +9,37 @@ from .models import Order, OrderItem
 
 
 class OrderItemSerializer(serializers.ModelSerializer):
+    """Serializes the product line item inside an order."""
     product_details = ProductSerializer(source='product', read_only=True)
     product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
     
     class Meta:
+        """Represents the Meta class in this module."""
         model = OrderItem
         fields = ['id', 'product', 'product_details', 'quantity', 'price_at_order']
         read_only_fields = ['id', 'price_at_order']
 
 
 class OrderCreateSerializer(serializers.ModelSerializer):
+    """Creates a new order and its related order items from API input."""
+
     items = OrderItemSerializer(many=True, write_only=True)
     address = serializers.PrimaryKeyRelatedField(queryset=Address.objects.all())
     
     class Meta:
+        """Represents the Meta class in this module."""
         model = Order
         fields = ['address', 'items', 'notes']
     
     def validate_address(self, value):
-        """Ensure the address belongs to the requesting user"""
+        """Reject addresses that do not belong to the current authenticated user."""
         request = self.context.get('request')
         if request and value.user != request.user:
             raise serializers.ValidationError("Address does not belong to you")
         return value
     def create(self, validated_data):
+        """Create the order, validate each item, and calculate the total amount."""
+
         print(f"[OrderCreateSerializer.create] Starting order creation")
         print(f"[OrderCreateSerializer.create] Validated data: {validated_data}")
         
@@ -105,11 +114,14 @@ class OrderCreateSerializer(serializers.ModelSerializer):
 
 
 class OrderDetailSerializer(serializers.ModelSerializer):
+    """Returns the full order details used in order detail views."""
+
     items = OrderItemSerializer(many=True, read_only=True)
     address = AddressSerializer(read_only=True)
     user_email = serializers.CharField(source='user.email', read_only=True)
     
     class Meta:
+        """Represents the Meta class in this module."""
         model = Order
         fields = ['id', 'user_email', 'address', 'status', 'total', 'notes',
                   'items', 'created_at', 'updated_at']
@@ -117,11 +129,14 @@ class OrderDetailSerializer(serializers.ModelSerializer):
 
 
 class OrderListSerializer(serializers.ModelSerializer):
+    """Returns a compact list view of orders for dashboards and history pages."""
+
     user_email = serializers.CharField(source='user.email', read_only=True)
     items = OrderItemSerializer(many=True, read_only=True)
     address = AddressSerializer(read_only=True)
     
     class Meta:
+        """Represents the Meta class in this module."""
         model = Order
         fields = ['id', 'user_email', 'status', 'total', 'created_at', 'updated_at', 
                   'items', 'address', 'notes']
@@ -129,6 +144,9 @@ class OrderListSerializer(serializers.ModelSerializer):
 
 
 class OrderStatusUpdateSerializer(serializers.ModelSerializer):
+    """Allows admins to update only the status field of an order."""
+
     class Meta:
+        """Represents the Meta class in this module."""
         model = Order
         fields = ['status']

@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/pages/Products.jsx.*/
+
 import { useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import CategoryFilter from '../components/CategoryFilter'
@@ -6,6 +8,7 @@ import { useCart } from '../context/CartContext'
 import toast from 'react-hot-toast'
 
 export default function Products() {
+    /* Renders the Products UI component. */
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [selectedCategory, setSelectedCategory] = useState(null)

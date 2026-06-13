@@ -1,4 +1,7 @@
+/* Documentation for frontend/src/components/LoadingSpinner.jsx.*/
+
 export default function LoadingSpinner({ message = 'Loading...' }) {
+    /* Renders the LoadingSpinner UI component. */
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">

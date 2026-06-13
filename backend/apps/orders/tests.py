@@ -1,3 +1,5 @@
+"""Tests for the orders app models and their expected behavior."""
+
 import pytest
 from django.test import TestCase
 from django.utils import timezone
@@ -11,6 +13,7 @@ class OrderModelTest(TestCase):
     """Test cases for Order model"""
 
     def setUp(self):
+        """Handles the setUp behavior for this module."""
         self.user = User.objects.create_user(
             username='testuser',
             email='test@example.com',
@@ -24,7 +27,7 @@ class OrderModelTest(TestCase):
         )
 
     def test_create_order(self):
-        """Test order creation"""
+        """Verify that an order can be created with the expected fields."""
         order = Order.objects.create(
             user=self.user,
             address=self.address,
@@ -41,7 +44,7 @@ class OrderModelTest(TestCase):
         self.assertIsNotNone(order.updated_at)
 
     def test_order_default_status(self):
-        """Test order default status"""
+        """Verify that a new order starts in the pending state."""
         order = Order.objects.create(
             user=self.user,
             address=self.address,
@@ -50,7 +53,7 @@ class OrderModelTest(TestCase):
         self.assertEqual(order.status, 'pending')
 
     def test_order_str_method(self):
-        """Test order string representation"""
+        """Confirm the human-readable string representation of an order."""
         order = Order.objects.create(
             user=self.user,
             address=self.address,
@@ -60,7 +63,7 @@ class OrderModelTest(TestCase):
         self.assertEqual(str(order), expected_str)
 
     def test_order_status_choices(self):
-        """Test order status choices"""
+        """Ensure all supported order status values are valid."""
         valid_statuses = ['pending', 'processing', 'shipped', 'delivered', 'cancelled']
         for status in valid_statuses:
             order = Order.objects.create(
@@ -73,9 +76,10 @@ class OrderModelTest(TestCase):
 
 
 class OrderItemModelTest(TestCase):
-    """Test cases for OrderItem model"""
+    """Test cases for the OrderItem model and its constraints."""
 
     def setUp(self):
+        """Handles the setUp behavior for this module."""
         self.user = User.objects.create_user(
             username='testuser',
             email='test@example.com',
@@ -102,7 +106,7 @@ class OrderItemModelTest(TestCase):
         )
 
     def test_create_order_item(self):
-        """Test order item creation"""
+        """Verify that an order item can be linked to an order and a product."""
         order_item = OrderItem.objects.create(
             order=self.order,
             product=self.product,
@@ -115,7 +119,7 @@ class OrderItemModelTest(TestCase):
         self.assertEqual(order_item.price_at_order, Decimal('50.00'))
 
     def test_order_item_str_method(self):
-        """Test order item string representation"""
+        """Confirm the order item string shows the product and quantity."""
         order_item = OrderItem.objects.create(
             order=self.order,
             product=self.product,
@@ -126,7 +130,7 @@ class OrderItemModelTest(TestCase):
         self.assertEqual(str(order_item), expected_str)
 
     def test_order_item_unique_together(self):
-        """Test unique together constraint for order and product"""
+        """Verify that the same product cannot be added twice to one order."""
         OrderItem.objects.create(
             order=self.order,
             product=self.product,

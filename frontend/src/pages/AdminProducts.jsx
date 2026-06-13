@@ -1,9 +1,12 @@
+/* Documentation for frontend/src/pages/AdminProducts.jsx.*/
+
 import { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import productService from '../services/productService'
 import toast from 'react-hot-toast'
 
 export default function AdminProducts() {
+    /* Renders the AdminProducts UI component. */
   const { user } = useAuth()
   const [products, setProducts] = useState([])
   const [categories, setCategories] = useState([])

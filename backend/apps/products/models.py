@@ -1,3 +1,5 @@
+"""Documentation for backend/apps/products/models.py."""
+
 from django.db import models
 
 
@@ -8,10 +10,12 @@ class Category(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
+        """Represents the Meta class in this module."""
         verbose_name_plural = 'categories'
         ordering = ['name']
     
     def __str__(self):
+        """Handles the __str__ behavior for this module."""
         return self.name
 
 
@@ -29,6 +33,7 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
+        """Represents the Meta class in this module."""
         ordering = ['-created_at']
         indexes = [
             models.Index(fields=['category']),
@@ -36,4 +41,5 @@ class Product(models.Model):
         ]
     
     def __str__(self):
+        """Handles the __str__ behavior for this module."""
         return self.name

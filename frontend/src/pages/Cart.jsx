@@ -1,9 +1,12 @@
+/* Documentation for frontend/src/pages/Cart.jsx.*/
+
 import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { FiTrash2 } from 'react-icons/fi'
 import toast from 'react-hot-toast'
 
 export default function Cart() {
+    /* Renders the Cart UI component. */
   const navigate = useNavigate()
   const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart()
 

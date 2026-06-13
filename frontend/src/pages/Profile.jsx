@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/pages/Profile.jsx.*/
+
 import { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import authService from '../services/authService'
@@ -5,6 +7,7 @@ import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 
 export default function Profile() {
+    /* Renders the Profile UI component. */
   const navigate = useNavigate()
   const { user, updateProfile } = useAuth()
   const [loading, setLoading] = useState(false)

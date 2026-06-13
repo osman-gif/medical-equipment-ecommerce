@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/pages/ProductDetail.jsx.*/
+
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import productService from '../services/productService'
@@ -5,6 +7,7 @@ import { useCart } from '../context/CartContext'
 import toast from 'react-hot-toast'
 
 export default function ProductDetail() {
+    /* Renders the ProductDetail UI component. */
   const { id } = useParams()
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)

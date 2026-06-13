@@ -1,4 +1,7 @@
+/* Documentation for frontend/src/components/ProductCard.jsx.*/
+
 export default function ProductCard({ product, onAddToCart }) {
+    /* Renders the ProductCard UI component. */
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
       {/* Product Image */}

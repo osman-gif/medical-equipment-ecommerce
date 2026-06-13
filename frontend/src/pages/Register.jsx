@@ -1,9 +1,33 @@
+/* Documentation for frontend/src/pages/Register.jsx.*/
+
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import toast from 'react-hot-toast'
 
+const getErrorMessage = (err, fallback) => {
+  const data = err?.response?.data
+
+  if (typeof data === 'string') return data || fallback
+
+  const messages = []
+  for (const key of ['detail', 'error', 'non_field_errors']) {
+    const value = data?.[key]
+    if (Array.isArray(value)) messages.push(...value)
+    else if (typeof value === 'string' && value.trim()) messages.push(value)
+  }
+
+  for (const key of ['email', 'username', 'password', 'first_name', 'last_name', 'phone']) {
+    const value = data?.[key]
+    if (Array.isArray(value)) messages.push(...value)
+    else if (typeof value === 'string' && value.trim()) messages.push(value)
+  }
+
+  return messages[0] || fallback
+}
+
 export default function Register() {
+    /* Renders the Register UI component. */
   const navigate = useNavigate()
   const { register } = useAuth()
   const [loading, setLoading] = useState(false)
@@ -37,7 +61,7 @@ export default function Register() {
       toast.success('Registration successful!')
       navigate('/')
     } catch (error) {
-      const message = error.response?.data?.email?.[0] || error.response?.data?.error || 'Registration failed'
+      const message = getErrorMessage(error, 'Registration failed')
       toast.error(message)
     } finally {
       setLoading(false)

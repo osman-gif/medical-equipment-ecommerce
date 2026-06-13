@@ -1,7 +1,10 @@
+/* Documentation for frontend/src/pages/Home.jsx.*/
+
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 export default function Home() {
+    /* Renders the Home UI component. */
   const { user } = useAuth()
 
   return (

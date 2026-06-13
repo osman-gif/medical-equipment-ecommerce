@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/components/ErrorBoundary.jsx.*/
+
 import { Component } from 'react'
 import { FiAlertTriangle } from 'react-icons/fi'
 

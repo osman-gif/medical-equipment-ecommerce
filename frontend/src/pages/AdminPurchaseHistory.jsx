@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/pages/AdminPurchaseHistory.jsx.*/
+
 import { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
@@ -5,6 +7,7 @@ import orderService from '../services/orderService'
 import toast from 'react-hot-toast'
 
 export default function AdminPurchaseHistory() {
+    /* Renders the AdminPurchaseHistory UI component. */
   const { user } = useAuth()
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)

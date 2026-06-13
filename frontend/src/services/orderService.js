@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/services/orderService.js.*/
+
 import api from './api'
 
 const orderService = {

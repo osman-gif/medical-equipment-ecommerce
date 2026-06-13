@@ -1,3 +1,5 @@
+/* Documentation for frontend/src/services/deliveryService.js.*/
+
 import api from './api'
 
 const deliveryService = {
